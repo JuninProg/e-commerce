@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="images/home/favicon.png" />
+    <link rel="stylesheet" href="styles/default.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <script src="scripts/builder.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/filter.js"></script>
+    <title>Mercado Livre</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__first">
+        <a href="#" onclick="buildProductsHTML(globalThis.PRODUCTS)"
+          ><img src="images/home/logo.png"
+        /></a>
+      </div>
+      <div class="nav__middle">
+        <input id="text_search" type="text" />
+        <picture onclick="filterByName()">
+          <img class="pointer" src="images/home/magnifying_glass.png" />
+        </picture>
+      </div>
+      <div class="nav__last">
+        <a href="#"><img src="images/home/loyalty.webp" /></a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="main__filter">
+        <div class="main__filter-box">
+          <h2 id="main_title">Xbox</h2>
+          <p id="main_total">3.167 resultados</p>
+        </div>
+        <div class="main__filter-box">
+          <h3>Preço</h3>
+          <div>
+            <p class="pointer" onclick="filterByPrice(0, 350)">Até R$350</p>
+          </div>
+          <div>
+            <p class="pointer" onclick="filterByPrice(500, 1000)">
+              R$500 a R$1.000
+            </p>
+          </div>
+          <div>
+            <p class="pointer" onclick="filterByPrice(1500)">Mais de R$1.500</p>
+          </div>
+          <div>
+            <input id="min_price" type="text" placeholder="Mínimo" />
+            <p>-</p>
+            <input id="max_price" type="text" placeholder="Máximo" />
+            <div onclick="filterByPriceInput()">
+              <svg width="20" height="20" class="pointer">
+                <path
+                  d="M8.27686 4.34644L7.42834 5.19496L12.224 9.99059L7.42334 14.7912L8.27187 15.6397L13.921 9.99059L8.27686 4.34644Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="main__filter-box">
+          <h3>Condição</h3>
+          <div>
+            <p class="pointer" onclick="filterByUsage('Novo')">Novo</p>
+          </div>
+          <div>
+            <p class="pointer" onclick="filterByUsage('Usado')">Usado</p>
+          </div>
+        </div>
+        <div class="main__filter-box">
+          <h3>Localização</h3>
+          <div>
+            <p class="pointer" onclick="filterByLocation('São Paulo')">
+              São Paulo
+            </p>
+          </div>
+          <div>
+            <p class="pointer" onclick="filterByLocation('Rio Grande do Sul')">
+              Rio Grande do Sul
+            </p>
+          </div>
+          <div>
+            <p class="pointer" onclick="filterByLocation('Pará')">Pará</p>
+          </div>
+        </div>
+      </div>
+      <div class="main__items">
+        <!-- <div class="main__items-box">
+          <div class="main__items-box__image">
+            <img
+              src="images/home/main/main__items-box__image-1.png"
+              alt="image"
+            />
+          </div>
+          <div class="main__items-box__caption">
+            <div>
+              <h2>R$ 2.110</h2>
+              <p class="text-green">
+                <strong class="text-black">em</strong> 10x R$ 211 sem juros
+              </p>
+            </div>
+            <p class="text-green"><strong>Frete Grátis</strong></p>
+            <p>Usado</p>
+            <p>Microsoft Xbox Series S 512GB Standard cor branco</p>
+            <p>Osório - Rio Grande do Sul</p>
+          </div>
+        </div> -->
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <div class="footer__links">
+          <a href="#">Trabalhe conosco</a>
+          <a href="#">Termos e condições</a>
+          <a href="#">Como cuidamos da sua privacidade</a>
+          <a href="#">Contato</a>
+          <a href="#">Informações sobre seguros</a>
+        </div>
+        <div class="footer__copyright">
+          <p>Copyright © JuninProg.</p>
+          <p>
+            CNPJ n.º 00.000.000/0000-00 / Av. dos Guris, nº 666, Osório/RS - CEP
+            95520-000 - empresa do grupo JuninProg.
+          </p>
+        </div>
+      </div>
+      <div>
+        <p>Feito por: José Ferreira de Lima Júnior</p>
+        <p>(Cópia para fins educacionais!)</p>
+      </div>
+    </footer>
+  </body>
+</html>
